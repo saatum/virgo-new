@@ -1,0 +1,43 @@
+{% extends 'vergo/base.html' %}
+{% block content %}
+
+<section id="hero" class="about-specific d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+            <div class="col-xl-6 col-lg-8">
+                <h3>Virgo About</h3>
+                <h2>We are team of talented digital marketers</h2>
+            </div>
+        </div>
+        <div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="round-circle size-card card">
+                        <div class="card-body">
+                            <img style="float: right;" width="40vh" class="rounded-circle"
+                                src="{{user.profile.image.url}}" alt="">
+                            <h5 class="tx-center card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional
+                                content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <img style="float: right;" width="40vh" class="rounded-circle"
+                                src="{{user.profile.image.url}}" alt="">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional
+                                content.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock %}

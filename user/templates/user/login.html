@@ -1,0 +1,40 @@
+{% extends 'vergo/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="mt-1" style="background: radial-gradient(circle, red 20%, blue 40%, rgba(58, 55, 88, 0.445) 20%);">
+    <div class="container py-5 h-100"
+        style="background-image: url('https://cdn.pixabay.com/photo/2018/01/30/22/50/forest-3119826__340.jpg'); opacity: 0.7; background-repeat: no-repeat; background-size: cover;">
+        <div class="row border">
+            <div class="col">
+                <img src="https://cdn.pixabay.com/photo/2018/02/28/12/25/login-3187888__340.jpg" alt="" class="w-100" style="border: transparent; border-radius: 2rem;">
+                <p class="lead text-white fw-400">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quam voluptatibus labore ipsum rerum
+                    ea veritatis aspernatur minima, tenetur perferendis.
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-7 col-xl-6">
+                <form action="#" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <div class="text-white fs-4" style="font-size: larger; line-height: 2rem;">
+                            {{form|crispy}}
+                            <div class="form-group text-center mt-3">
+                                <button class="btn btn-outline-info  text-white" type="submit">Sign In</button>
+                            </div>
+                        </div>
+                        <div class="border-top pt-3 m-3">
+                            <small class="text-muted  text-white">
+                                Don't have an account? <a href="{% url 'login' %}" class="text-white">Sign Up</a>
+                            </small>
+                        </div>
+                    </div>
+                </form>
+                <p class="lead text-white fw-400 mt-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque corporis dignissimos aperiam officia esse odio magnam porro eos a eveniet.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
