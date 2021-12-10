@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('VIRGO')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['glion.pythonanywhere.com']
 
 
 # Application definition
