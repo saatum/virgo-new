@@ -2,7 +2,6 @@ from django.db import models
 from django.utils import timezone
 from django.urls import reverse
 from ckeditor.fields import RichTextField
-from django.contrib.auth.models import User
 
 
 # The blog post model
@@ -22,8 +21,7 @@ CATEGORIES = [
     (3, 'Education'),
     (4, 'Tech'),
     (5, 'Sports'),
-    (6, 'Politics'),
-    (7, 'History')
+    (6, 'news')
 ]
 
 
@@ -37,7 +35,7 @@ class Post(models.Model):
     date_posted = models.DateTimeField(default=timezone.now)
     status = models.IntegerField(choices=STATUS, default=0)
     post_category = models.IntegerField(choices=CATEGORIES, default=1)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey('self', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
